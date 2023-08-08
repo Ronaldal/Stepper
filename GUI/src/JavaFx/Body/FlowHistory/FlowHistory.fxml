@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane id="screen" fitToHeight="true" fitToWidth="true" prefHeight="724.0" prefWidth="1042.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.Body.FlowHistory.FlowHistory">
+   <content>
+      <BorderPane styleClass="tab-content-background" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0">
+         <top>
+            <HBox alignment="TOP_CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="5.0" />
+               </BorderPane.margin>
+               <children>
+                  <TableView fx:id="flowsExecutionTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" onMouseClicked="#setFlowExecutionDetails" prefHeight="200.0" prefWidth="871.0">
+                    <columns>
+                      <TableColumn fx:id="flowsExecutionsNamesCol" prefWidth="299.0" text="Flow Name" />
+                      <TableColumn fx:id="flowsExecutionsTimeCol" prefWidth="234.0" text="Time" />
+                        <TableColumn fx:id="flowsExecutionsStatusCol" prefWidth="337.0" text="Execution Status" />
+                    </columns>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </TableView>
+                  <VBox fx:id="filterVbox" alignment="TOP_CENTER" spacing="8.0">
+                     <children>
+                        <Label fx:id="filterSelectionLabel" text="Choose Filter" />
+                        <HBox alignment="CENTER" spacing="2.0">
+                           <children>
+                              <ComboBox fx:id="filterChoose" prefHeight="31.0" prefWidth="131.0" />
+                              <ImageView fx:id="resetTable" fitHeight="26.0" fitWidth="22.0" onMouseClicked="#restTableFilter" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@refreshTableIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="TOP_RIGHT" spacing="5.0">
+                     <children>
+                        <Button fx:id="rerunButton" id="dark" mnemonicParsing="false" onAction="#rerunFlow" text="Rerun flow" />
+                        <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
+                        <ChoiceBox fx:id="continuationChoiceBox" onMouseEntered="#setContinuationText" prefHeight="31.0" prefWidth="143.0" />
+                        <ImageView fx:id="continuationButtonImage" fitHeight="31.0" fitWidth="45.0" onMouseClicked="#continueToFlow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../FlowExecution/continueIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </bottom>
+         <center>
+            <BorderPane prefHeight="454.0" prefWidth="1029.0" BorderPane.alignment="CENTER">
+               <center>
+                  <ScrollPane fitToHeight="true" fitToWidth="true">
+                     <content>
+                        <VBox styleClass="tab-content-background" fx:id="MainExecutionDataVbox" alignment="TOP_CENTER" prefHeight="481.0" prefWidth="305.0" spacing="5.0">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </center>
+               <top>
+                  <VBox alignment="CENTER" spacing="3.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Separator prefWidth="200.0" />
+                        <Label fx:id="CentralFlowName" text="Flow Name">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </top>
+               <left>
+                  <TreeView styleClass="tab-content-background" fx:id="StepsTreeVIew" minWidth="328.0" onMouseClicked="#setStepData" prefHeight="429.0" prefWidth="376.0" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets right="5.0" top="5.0" />
+                     </padding>
+                  </TreeView>
+               </left></BorderPane>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

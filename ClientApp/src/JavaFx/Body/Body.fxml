@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<TabPane fx:id="bodyComponent" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.Body.BodyController">
+
+    <Tab id="tab" fx:id="flowDefinitionTab" text="Flows Definition">
+        <fx:include fx:id="flowDefinition" source="FlowDefinition/FlowDefinition.fxml"/>
+    </Tab>
+    <Tab id="tab" fx:id="flowExecutionTab" text="Flows Executions">
+        <fx:include fx:id="flowExecution" source="FlowExecution/FlowExecution.fxml"/>
+    </Tab>
+    <Tab id="tab" fx:id="flowHistoryTab" text="Flow History">
+        <fx:include fx:id="flowHistory" source="FlowHistory/FlowHistory.fxml"/>
+    </Tab>
+</TabPane>

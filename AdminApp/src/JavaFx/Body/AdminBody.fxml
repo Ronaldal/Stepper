@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+
+<TabPane fx:id="bodyComponent" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.Body.AdminBodyController">
+
+  <tabs>
+      <Tab id="tab" fx:id="UserManagementTab" text="Users Management" >
+          <content>
+              <fx:include fx:id="userManagement" source="UserManagement/UserManagement.fxml" />
+          </content></Tab>
+      <Tab id="tab" fx:id="RolesManagementTab" text="Roles Management">
+          <content>
+              <fx:include fx:id="rolesManagement" source="RolesManagement/RolesManagement.fxml" />
+          </content></Tab>
+    <Tab id="tab" fx:id="flowHistoryTab" text="Flow History">
+      <content>
+          <fx:include fx:id="flowHistory" source="FlowHistory/FlowHistory.fxml" />
+      </content></Tab>
+    <Tab id="tab" fx:id="flowStatsTab" text="Flow Stats">
+      <content>
+          <fx:include fx:id="flowStats" source="FlowStats/FlowStats.fxml" />
+      </content></Tab>
+  </tabs>
+</TabPane>

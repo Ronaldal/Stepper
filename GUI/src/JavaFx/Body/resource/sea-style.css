@@ -1,0 +1,304 @@
+.framed-vbox {
+    -fx-padding: 10px;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.label-flowName{
+    -fx-text-fill: linear-gradient(#151515, #6e6d6d);
+    -fx-background-color: null;
+    -fx-underline: true;
+    -fx-alignment: center;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+.label-userString{
+    -fx-text-fill: linear-gradient(#151515, #6e6d6d);
+    -fx-background-color: null;
+    -fx-underline: true;
+    -fx-alignment: center;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.progress-bar{
+    -fx-progress-color: #636e5e;
+}
+
+.button {
+    -fx-background-color:
+            #91d9c8,
+            linear-gradient(#6b98a6 0%, #f5f8fa 20%, #2560ad 100%),
+            linear-gradient(#4345bd, #1ab2a5),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+.button {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+.button:hover {
+    /* Hover style */
+    -fx-background-color:
+            #91d9c8,
+            linear-gradient( #4d7cb9 100%, #f5f8fa 20%,#6b98a6 0%),
+            linear-gradient( #87b2af, #9696bd),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-text-fill: white;
+}
+
+.v-button {
+    -fx-text-fill: green;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+
+}
+
+.x-button {
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+
+}
+
+/* Style the tab headers */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color:
+            #91d9c8,
+            linear-gradient(#6b98a6 0%, #f5f8fa 20%, #9dabc0 100%),
+            linear-gradient(#888ab4, #1ab2a5),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+}
+
+.tab-pane .tab-header-area .tab {
+    -fx-background-color: #214998;
+    -fx-text-fill: #333333;
+    -fx-font-size: 18px;
+}
+
+.tab-pane .tab-header-area .tab:selected {
+    -fx-background-color: #6d6e6e;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+}
+
+/* Style the tab content */
+.tab-pane .tab-content-area {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Style the tab content labels */
+.tab-pane .tab-content-area .tab-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.label {
+    -fx-text-fill: #bfd7d6;
+}
+
+.table-view  {
+    -fx-background-color: transparent;
+}
+
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: #93f9b911;
+}
+
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
+}
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+.table-row-cell: hover {
+    -fx-background-color: #93f9b911;
+    -fx-text-background-color: white;
+}
+.table-row-cell: odd{
+    -fx-background-color: #68e1dd;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell: even {
+    -fx-background-color: #3e97fc;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: white;
+    -fx-background-radius: 5em;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to bottom, #1dbbdd44, rgba(12, 187, 77, 0.27));
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #bcceb5, #395ea6);
+}
+
+
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #bcceb5, #6263ff);
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb {
+    -fx-background-color:  linear-gradient(to right, #bcceb5, #6263ff);
+}
+
+
+.list-cell: odd{
+    -fx-background-color: #395ea6;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.list-cell: even{
+    -fx-background-color: #395ea6;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.list-cell: hover{
+    -fx-text-background-color: white;
+}
+
+.text-field {
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-weight: bold;
+    -fx-border-color: linear-gradient(#6263ff 0%, #3ec1fc 20%, #395ea6 100%);
+    -fx-background-color:
+            #91d9c8,
+            linear-gradient(#6b98a6 0%, #f5f8fa 20%, #2560ad 100%),
+            linear-gradient(#4345bd, #1ab2a5),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+}
+
+.tab-content-background{
+    -fx-background-color:
+            #91d9c8,
+            linear-gradient(#97d2e5 0%, #f5f8fa 20%, #9ebeef 100%),
+            linear-gradient(#9292f3, #a8e7e0),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+}
+.tree-view {
+    -fx-background-color:
+            #91d9c8,
+            linear-gradient(#6b98a6 0%, #f5f8fa 20%, #2560ad 100%),
+            linear-gradient(#4345bd, #1ab2a5),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-padding: 10;
+}
+
+.tree-cell {
+    -fx-background-color:
+            #91d9c8,
+            linear-gradient(#6b98a6 0%, #f5f8fa 20%, #2560ad 100%),
+            linear-gradient(#4345bd, #1ab2a5),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-text-fill: #0f110e;
+    -fx-font-size: 14px;
+}
+
+.tree-cell:hover {
+    -fx-background-color: #395ea6;
+}
+
+.choice-box{-fx-background-color: #6263ff
+}
+/*background color of the whole context menu
+ */
+   .choice-box .context-menu { -fx-background-color: #03130f; }
+/*
+Focused item background color in the list
+ */
+   .choice-box .menu-item:focused { -fx-background-color: #7bb3ce; }
+/*
+Text color of non-focused items in the list
+ */
+   .choice-box .menu-item > .label { -fx-text-fill: white; }
+/*
+Text color of focused item in the list
+ */
+   .choice-box .menu-item:focused > .label { -fx-text-fill: #3e8585; }
+
+/* Style the bars */
+.chart-bar {
+    -fx-bar-fill: #339699;
+    -fx-border-color: #000000;
+    -fx-border-width: 1px;
+}
+
+/* Style the axis */
+.axis {
+    -fx-font-size: 20px;
+    -fx-label-fill: #070202;
+    -fx-text-fill: #070202;
+}
+
+/* Style the chart background */
+.chart-content {
+    -fx-background-color:
+            #91d9c8,
+            linear-gradient(#6b98a6 0%, #f5f8fa 20%, #2560ad 100%),
+            linear-gradient(#4345bd, #1ab2a5),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+}
+
+/* Style the chart title */
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333333;
+}
+

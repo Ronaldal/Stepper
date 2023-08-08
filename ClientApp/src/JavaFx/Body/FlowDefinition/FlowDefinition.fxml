@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<ScrollPane id="screen" fitToHeight="true" fitToWidth="true" prefHeight="597.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.Body.FlowDefinition.FlowDefinition">
+   <content>
+      <BorderPane styleClass="tab-content-background" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="1131.0">
+         <center>
+            <BorderPane minHeight="450.0" minWidth="400.0">
+               <bottom>
+                  <VBox alignment="BOTTOM_RIGHT" minHeight="36.0" minWidth="591.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button id="dark" fx:id="executeFlow" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#executeFlow" text="Execute Flow" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" right="5.0" />
+                     </padding>
+                  </VBox>
+               </bottom>
+               <center>
+                  <HBox alignment="TOP_CENTER" spacing="5.0" BorderPane.alignment="TOP_LEFT">
+                     <children>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox alignment="TOP_CENTER" spacing="5.0">
+                           <children>
+                              <TextField editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="133.0" text="Formal Outputs :" />
+                              <ListView fx:id="formalOutputs" maxHeight="140.0" maxWidth="150.0" minHeight="50.0" minWidth="100.0" prefWidth="153.0" />
+                              <TextField editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="104.0" text="All Outputs" />
+                              <TableView fx:id="AllOutputsTable" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0">
+                                 <columns>
+                                    <TableColumn fx:id="outputName" maxWidth="1.7976931348623157E308" prefWidth="111.0" text="Name" />
+                                    <TableColumn fx:id="outputType" minWidth="77.0" prefWidth="100.0" text="Type" />
+                                    <TableColumn fx:id="outputSteps" prefWidth="150.0" text="Step" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox alignment="TOP_CENTER" spacing="5.0">
+                           <children>
+                              <TableView fx:id="stepsTable" maxWidth="270.0" prefWidth="234.0">
+                                 <columns>
+                                    <TableColumn fx:id="stepCol" prefWidth="111.0" text="Step" />
+                                    <TableColumn fx:id="readOnlyCol" prefWidth="88.0" text="Read Only" />
+                                 </columns>
+                              </TableView>
+                              <TextField editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="102.0" text="Free Inputs" />
+                              <TableView fx:id="freeInputsTable" minHeight="0.0" minWidth="0.0">
+                                <columns>
+                                  <TableColumn fx:id="freeInputName" maxWidth="1.7976931348623157E308" prefWidth="111.0" text="Name" />
+                                  <TableColumn fx:id="freeInputType" minWidth="77.0" prefWidth="77.0" text="Type" />
+                                    <TableColumn fx:id="freeInputNecessity" minWidth="95.0" prefWidth="101.0" text="Necessity" />
+                                    <TableColumn fx:id="freeInputSteps" maxWidth="1.7976931348623157E308" prefWidth="-1.0" text="Steps" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox alignment="TOP_CENTER" spacing="5.0">
+                           <children>
+                              <Label fx:id="isReadOnlyFlow1" nodeOrientation="LEFT_TO_RIGHT" text="Choose step for more information:" wrapText="true">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="stepsSelection" minWidth="150.0" prefHeight="31.0" />
+                              <TextField editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="69.0" text="Inputs" />
+                              <TableView fx:id="stepInputsTable">
+                                <columns>
+                                  <TableColumn fx:id="stepInputsName" maxWidth="1.7976931348623157E308" minWidth="111.0" prefWidth="111.0" text="Name" />
+                                  <TableColumn fx:id="stepInputsNecessity" prefWidth="101.0" text="Necessity" />
+                                    <TableColumn fx:id="stepInputsConnected" minWidth="100.0" prefWidth="101.0" text="Connected" />
+                                    <TableColumn fx:id="stepInputsFromOutputs" minWidth="100.0" prefWidth="125.0" text="From output" />
+                                </columns>
+                              </TableView>
+                              <TextField editable="false" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="78.0" text="Outputs" />
+                              <TableView fx:id="stepOutputsTable" maxWidth="420.0" prefWidth="287.0">
+                                <columns>
+                                  <TableColumn fx:id="stepOutputsNames" minWidth="111.0" prefWidth="111.0" text="Name" />
+                                  <TableColumn fx:id="stepOutputsConnect" minWidth="84.0" prefWidth="84.0" text="Connected" />
+                                    <TableColumn fx:id="stepOutputsToInput" minWidth="120.0" prefWidth="125.0" text="To input" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </HBox>
+               </center>
+               <top>
+                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" prefHeight="90.0" prefWidth="808.0" spacing="5.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="flowName" alignment="CENTER" contentDisplay="CENTER" styleClass="FlowName" text="Flow Name">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="flowDescription" nodeOrientation="LEFT_TO_RIGHT" text="Description" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="TOP_CENTER" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="isReadOnlyFlow" nodeOrientation="LEFT_TO_RIGHT" text="Is Read Only :" wrapText="true">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="readOnlyButton" maxHeight="24.0" minHeight="24.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="30.0" styleClass="v-button" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="continuationNumber" />
+                        <Separator prefWidth="200.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </VBox>
+               </top>
+            </BorderPane>
+         </center>
+         <left>
+            <TableView fx:id="flowTable" maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" onMouseClicked="#tableMouseClick" prefHeight="595.0" prefWidth="372.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="flowNameCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="140.0" text="Flow Name" />
+                  <TableColumn fx:id="freeInputs" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="87.0" sortable="false" text="Free Inputs" />
+                  <TableColumn fx:id="stepsNumber" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="49.0" sortable="false" text="Steps" />
+                  <TableColumn fx:id="ContinuationsNumber" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="117.0" sortable="false" text="Continuations " />
+                  <TableColumn fx:id="DescriptionCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="130.0" resizable="false" sortable="false" text="Description" />
+              </columns>
+            </TableView>
+         </left>
+      </BorderPane>
+   </content>
+</ScrollPane>

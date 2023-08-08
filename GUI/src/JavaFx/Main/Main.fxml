@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+
+<?import java.net.URL?>
+<BorderPane prefHeight="703.0" prefWidth="1137.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.AppController">
+    <top>
+        <fx:include fx:id="headerComponent" source="../../JavaFx/Header/Header.fxml" />
+    </top>
+   <center>
+      <fx:include fx:id="bodyComponent" source="../Body/Body.fxml" />
+   </center>
+    <stylesheets>
+        <URL value="@../Body/resource/classic-style.css"/>
+    </stylesheets>
+ 
+</BorderPane>

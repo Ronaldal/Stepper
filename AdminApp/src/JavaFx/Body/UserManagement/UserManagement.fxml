@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="732.0" prefWidth="1037.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.Body.UserManagement.UserManagement">
+   <content>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <ListView fx:id="UsersListView" onMouseClicked="#showUser" prefHeight="525.0" prefWidth="249.0" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <BorderPane BorderPane.alignment="CENTER">
+               <center>
+                  <VBox spacing="5.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="TOP_CENTER">
+                           <children>
+                              <Label fx:id="userNameLabel" />
+                           </children>
+                        </HBox>
+                        <Label text="Number of flows:" />
+                        <TextField fx:id="numOfFlows" editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="69.0" />
+                        <Label text="Num of Execution:" />
+                        <TextField fx:id="numOfExecutions" editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="72.0" />
+                        <Separator prefWidth="200.0" />
+                        <Label prefHeight="21.0" prefWidth="47.0" text="Roles:" />
+                        <ListView fx:id="rolesList" minHeight="120.0" minWidth="200.0" prefWidth="200.0" />
+                        <HBox alignment="CENTER" prefHeight="42.0" prefWidth="776.0">
+                           <children>
+                              <ImageView fx:id="removeRoleImage" fitHeight="29.0" fitWidth="37.0" onMouseClicked="#removeRole" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resource/delete.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <Label prefHeight="21.0" prefWidth="75.0" text="Add Role:" />
+                        <ListView fx:id="addRoleListView" maxHeight="200.0" minHeight="100.0" minWidth="200.0" prefWidth="579.0" />
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fx:id="addRoleImage" fitHeight="21.0" fitWidth="70.0" onMouseClicked="#addRole" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resource/add.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                           <children>
+                              <ImageView fx:id="managerImage" fitHeight="42.0" fitWidth="39.0" onMouseClicked="#managerImageClicked" onMouseEntered="#setTextInManagerIcon" onMouseExited="#disableTextInManagerIcon" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resource/managerGreen.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="ManagerTextFiled" editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="207.0" />
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </VBox>
+               </center>
+               <bottom>
+                  <HBox alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="saveImage" fitHeight="36.0" fitWidth="47.0" onMouseClicked="#save" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/save.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </bottom>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

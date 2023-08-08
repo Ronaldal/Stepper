@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="headerComponent" alignment="TOP_CENTER" prefHeight="86.0" prefWidth="863.0" styleClass="tab-content-background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.Header.HeaderController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="TOP" text="Stepper" textAlignment="CENTER" textFill="#403c3c" VBox.vgrow="ALWAYS">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox spacing="10.0">
+         <children>
+            <Button id="rnd" fx:id="loadButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLoadButtonClick" prefHeight="25.0" prefWidth="90.0" text="Load File" />
+            <Label fx:id="filePathLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" styleClass="label1" text="file path" />
+         </children>
+         <opaqueInsets>
+            <Insets left="5.0" right="5.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" spacing="10.0">
+         <children>
+            <Button id="rnd" fx:id="greenSytle" minWidth="-Infinity" mnemonicParsing="false" onAction="#greenSytleButton" text="green sytle">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Button>
+            <Button id="rnd" fx:id="seaSytle" mnemonicParsing="false" onAction="#seaSytleButton" text="sea sytle">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Button>
+            <Button id="rnd" fx:id="classicSytleButton" mnemonicParsing="false" onAction="#classicSytleButton" text="classic sytle">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Button>
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </HBox>
+      <Separator maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="200.0" />
+   </children>
+</VBox>
