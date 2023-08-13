@@ -1,3 +1,3 @@
-# Stepper Application - User Guide
+# Stepper 
 
 ## Introduction
